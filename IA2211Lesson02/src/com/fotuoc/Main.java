@@ -1,6 +1,7 @@
 package com.fotuoc;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -9,10 +10,16 @@ public class Main {
     public static final int serialNum = 10;
     boolean isActive = false;
 
+    private static boolean isOddNumber(int input) {
+        return (input % 2) == 1;
+    }
 
     public static void main(String[] args) {
+        /*
         System.out.println("Hello World!");
         System.out.println("Name: " + name);
+
+
 
         int valA = 10;
         double valB = (double) valA;
@@ -37,7 +44,6 @@ public class Main {
 
         int androidAPILevel = 3;
 
-        Scanner scanner = new Scanner(System.in);
 
         switch (androidAPILevel){
             case 3:
@@ -78,14 +84,105 @@ public class Main {
         }
 
 
-        String myString = scanner.next(); // read String value
-        int myInt = scanner.nextInt(); // read integer value
+
+        boolean isOld = true;
+        boolean isDark = true;
+
+        if (!isOld && isDark){
+            System.out.println("A dark young person");
+        }
+
+        char a = 'a';
+        char b = 'b';
+
+        if (a != 'a') {
+            System.out.println("a is greater than b");
+        }
+        else {
+            System.out.println("b is greater than a");
+        }
+
+        int x = 0;
+        int y = 0;
+
+        System.out.println("X = " + x++);
+        System.out.println("Y = " + ++y);
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Input number: ");
+        int xx = scanner.nextInt(); // read integer value
+        //String ss = scanner.next();
+
         scanner.close(); // close scanner
 
-        System.out.println("myString is: " + myString); // print string value
-        System.out.println("myInt is: " + myInt); // print integer value
+        System.out.println("myInt is: " + x); // print integer value
+
+        // This is to check the odd number
+        /*if (xx % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+        */
+        /*
+        if (isOddNumber(xx))
+            System.out.println("Odd number");
+        else
+            System.out.println("Even number");
+
+
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("Ruchira");
+        names.add("Sachintha");
+        names.add("Dilhan");
+        names.add("Amal");
+
+        int c = 0;
+        boolean isTrue = false;
+
+        for (int cc = 0; cc < names.size(); cc++) {
+            System.out.println(names.get(cc));
+            if ( cc == 2)
+                break;
+        }
+
+
+        /*while (c < names.size()) {
+            System.out.println( names.get(c) );
+
+            System.out.println("c = " + c);
+            if ( c == 1)
+                break;
+
+            c++;
+        }*/
+
+
+        Vehicle vehicle = new Vehicle("EP CAE 4455");
+        vehicle.setLicenseNumber("SP CAA 1122");
+
+        System.out.println("License Number: " + vehicle.getLicenseNumber());
+
+
+        Car car = new Car();
+        car.setWindScreenColor("Transparent");
+        car.setLicenseNumber("WP CAD 7788");
+        car.engineSize = 1000.0;
+
+        System.out.println("Car License Number: " + car.getLicenseNumber());
+        car.run();
+
+        Bike bike = new Bike();
+        bike.run();
+
+        Vehicle myCar = new Car();
+        myCar.run();
+
+
 
 
 
     }
+
+
 }
