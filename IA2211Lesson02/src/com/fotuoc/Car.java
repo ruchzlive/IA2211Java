@@ -12,6 +12,10 @@ public class Car extends Vehicle {
         this.windScreenColor = windScreenColor;
     }
 
+    public Car(String licenseNo) {
+        super(licenseNo);
+    }
+
     @Override
     public void run() {
         System.out.println("Car is running");
